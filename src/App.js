@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import "./App.css";
+import Icon from './LockIcon';
+import HomeScreen from './HomeScreen';
+import ContactScreen from './ContactScreen';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="navbar">
+          <div className="navbar-logo">Safelock <Icon /></div>
+          <nav className="navbar-links">
+            <Link to="/">Home</Link>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <Link to="/contact">Contact Us</Link>
+          </nav>
+        </header>
+
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/contact" element={<ContactScreen />} />
+        </Routes>
+
+        <footer>
+          <p>&copy; Safelock Securities LLC. All rights reserved. </p>
+        </footer>
+      </div>
+    </Router>
   );
 }
 

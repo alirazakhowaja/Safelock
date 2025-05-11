@@ -1,0 +1,23 @@
+.brand-logo {
+  width: 120px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #000000; /* changed to black */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin: 8px;
+  opacity: 0.6;
+}
+
+.brand-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.brand-logo img {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
+}
