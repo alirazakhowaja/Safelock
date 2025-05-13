@@ -29,7 +29,7 @@ function HomeScreen() {
         </section>
 
         {/* Services Section */}
-        <section className="services-section">
+        <div className="services-section">
           <h2>What can we help with?</h2>
           <div className="services-grid">
             <div className="service-box">
@@ -49,10 +49,10 @@ function HomeScreen() {
               <p>Our AI helps identify and mitigate fraudulent chargebacks and provides data to support you in navigating unemployment claims effectively</p>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Appreciation Section */}
-        <section className="appreciation-section">
+        <div className="appreciation-section">
           <h2>Wall of Appreciation</h2>
           <div className="testimonial-grid">
             <div className="testimonial-card">
@@ -80,15 +80,17 @@ function HomeScreen() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      
 
-      <section className="trial-section">
+      <div className="trial-section">
         <h2>Start your free 30 days trial today.</h2>
         <form className="trial-form">
           <input type="email" placeholder="Enter your email" required />
           <button type="submit">Start Free Trial</button>
         </form>
-      </section>
+      </div> 
+     
     </div>
   );
 }
